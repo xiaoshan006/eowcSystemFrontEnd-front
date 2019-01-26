@@ -42,56 +42,46 @@
 
     <div id="site-wrapper">
 
-        <!-- Site-header -->
+        <!-- header -->
         <div id="site-header">
+
+            <!-- header-top -->
             <div id="headerbar">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="custom-info">
-                                <i class="fa fa-clock-o">
-                                </i>We'are Open: Monday - Saturday, 8:00 Am - 18:00 Pm
-                            </div><!-- /.custom-info -->
-
+                                </i>${这是占位符,后台可以设置导航栏上方左侧信息}
+                            </div>
+                            <!--联系页面-->
                             <div class="social-links">
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
+                                <a href="#${QQ链接}">
+                                    <i class="fa fa-qq"></i> <!--QQ在线-->
                                 </a>
-                                <a href="#">
-                                    <i class="fa fa-facebook"></i>
+                                <a href="#${弹窗二维码}">
+                                    <i class="fa fa-wechat"></i> <!--微信公众号-->
                                 </a>
-                                <a href="#">
-                                    <i class="fa fa-behance"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-spotify"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-rss"></i>
-                                </a>
-                            </div><!-- /.social-links -->
+                            </div><!-- /.快速联系方式 -->
 
                             <nav id="site-navigator" class="top-navigator">
                                 <ul id="menu-top-menu" class="menu">
-                                    <li class="menu-item-has-children"><a href="#">Extra Pages</a>
-                                        <ul class="sub-menu">
-                                            <li ><a href="#">Maintenance Mode</a></li>
-                                            <li ><a href="#">Coming Soon</a></li>
-                                            <li><a href="#">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Elements</a></li>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Checkout</a></li>
+                                    <!--<li class="menu-item-has-children"><a href="#">Extra Pages</a>-->
+                                        <!--<ul class="sub-menu">-->
+                                            <!--<li ><a href="#">Maintenance Mode</a></li>-->
+                                            <!--<li ><a href="#">Coming Soon</a></li>-->
+                                            <!--<li><a href="#">404 Page</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <li><a href="#">登录/用户名</a></li>
+                                    <li><a href="#">注册/退出</a></li>
                                 </ul>
-                            </nav>
-                            <!-- /.top-navigator -->
+                            </nav><!-- /.顶部导航 -->
                         </div>
                     </div>
-                </div><!-- /.container -->
-            </div><!-- /.headerbar -->
+                </div>
+            </div><!-- /.顶部 -->
 
-            <!-- Header -->            
+            <!-- header-header -->
             <header id="header" class="header clearfix">
                 <div class="container">
                     <div class="row">
@@ -99,113 +89,49 @@
                             <div class="header-wrap clearfix">
                                 <div id="logo" class="logo">
                                     <a href="index.html" rel="home">
-                                        <img src="images/logo.png" alt="image">
+                                    <img src="images/logo.png" alt="image">
                                     </a>
-                                </div><!-- /.logo -->
+                                </div><!-- /.LOGO -->
                                 <div class="nav-wrap">
-                                    <div class="btn-menu"></div><!-- //mobile menu button -->
+                                    <div class="btn-menu"></div><!-- /.移动端菜单 -->
                                     <nav id="mainnav" class="mainnav">
                                         <ul class="menu"> 
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="index.html">首页</a></li>
+                                            <li><a href="about.html">关于</a></li>
+                                            <li><a href="services.html">服务</a></li>
 
-                                            <li><a href="blog-default.html">Blog</a>
+                                            <li><a href="blog-default.html">新闻博客</a>
                                                 <ul class="submenu"> 
-                                                    <li><a href="blog-default.html">Blog Default</a></li>
-                                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                                </ul><!-- /.submenu -->
+                                                    <li><a href="blog-default.html">流体式博客</a></li>
+                                                    <li><a href="blog-single.html">左右翻页式</a></li>
+                                                </ul><!-- /.子菜单 -->
                                             </li>                 
-                                            <li><a href="gallery.html">Gallery</a></li>                         
-                                            <li><a href="shop.html">Shop </a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul><!-- /.menu -->
-                                    </nav><!-- /.mainnav -->
-                                    <ul class="menu-extra">
-                                        <li class="shopping-cart">
-                                            <a href="#">
-                                                <i class="fa fa-shopping-cart"></i>
-                                                <span class="shopping-cart-items-count">2</span>
-                                            </a>
-                                            <div class="submenu">
-                                                <div class="widget_shopping_cart_content">
-                                                    <ul class="cart_list product_list_widget ">
-                                                        <li>
-                                                            <a href="#" class="box-img">
-                                                                <img src="images/shop/1-180x180.jpg" alt="images">
-                                                            </a>
-                                                            <div class="content-box">
-                                                                <a href="#">Aztec Print Socks
-                                                                </a>
-                                                                <span class="quantity">
-                                                                    2 × £20.00
-                                                                </span>
-                                                            </div>
-                                                            <a href="#" class="delete-product">
-                                                                x
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="box-img">
-                                                                <img src="images/shop/2-180x180.jpg" alt="images">
-                                                            </a>
-                                                            <div class="content-box">
-                                                                <a href="#">Embroidered Belt 
-                                                                </a>
-                                                                <span class="quantity">
-                                                                    2 × £35.00
-                                                                </span>
-                                                            </div>
-                                                            <a href="#" class="delete-product">
-                                                                x
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="total">
-                                                        <strong>Subtotal:</strong> 
-                                                        <span class="amount">£110.00</span>
-                                                    </p>
-                                                    <div class="wrap-buttons">
-                                                        <a class="button b1">View cart</a>
-                                                        <a class="button b2">Checkout</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id ="s" class="search-box">
-                                            <a href="#search" class="flat-search"><i class="fa fa-search"></i></a>
-                                            <div class="submenu top-search">
-                                                <div class="widget widget_search">
-                                                    <form class="search-form">
-                                                        <input type="search" class="search-field" placeholder="Search …">
-                                                        <input type="submit" class="search-submit">
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </li><!-- /.search-box -->
-                                    </ul> <!-- /.menu-extra -->  
-                                </div><!-- /.nav-wrap -->
-                                
-                            </div><!-- /.header-wrap -->
+                                            <li><a href="gallery.html">产品画展</a></li>
+                                            <li><a href="shop.html">商店</a></li>
+                                            <li><a href="contact.html">联系我们</a></li>
+                                        </ul><!-- /.菜单 -->
+                                    </nav><!-- /.主导航 -->
+                                </div><!-- /.导航 -->
+                            </div>
                         </div>
-                    </div> <!-- /.row -->
-                </div> <!--  /.container -->
-            </header><!-- /.header -->
+                    </div>
+                </div>
+            </header><!-- /.头部 -->
 
-            <!-- Slider -->
+            <!-- 轮播图 -->
             <div class="tp-banner-container">
                 <div class="tp-banner" >
                     <ul>
                         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
                             <img src="images/slides/slider_1.jpg" alt="slider-image" />
-                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">                            
-                                Repairing cars since 1986
-                            </div>  
-                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">                       
-                                Having fun and profit since 1988
-                            </div>    
+                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                ${图片1介绍文字1占位符}
+                            </div>
+                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                ${图片1介绍文字2占位符}
+                            </div>
                             <div class="tp-caption sfl flat-button-slider" data-x="415" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
-                                <a href="#" class="button-slider">Read More</a>
+                                <a href="#${图片1链接占位符}" class="button-slider">查看更多</a>
                             </div>
 
                             <div class="tp-caption sfl flat-and" data-x="565" data-y="257" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
@@ -214,17 +140,17 @@
 
                             <div class="tp-caption sfr flat-button-slider style1" data-x="615" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Click Here</a>
-                            </div>                   
+                            </div>
                         </li>
 
                         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
                             <img src="images/slides/slider_2.jpg" alt="slider-image" />
-                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">                            
-                                NEW CAR SERVICING
-                            </div>  
-                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">                       
-                                High Quality Panel and Paint
-                            </div>    
+                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                ${图片2介绍文字1占位符}
+                            </div>
+                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                ${图片2介绍文字2占位符}
+                            </div>
                             <div class="tp-caption sfl flat-button-slider" data-x="415" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Read More</a>
                             </div>
@@ -235,17 +161,17 @@
 
                             <div class="tp-caption sfr flat-button-slider style1" data-x="615" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Click Here</a>
-                            </div>                   
+                            </div>
                         </li>
 
                         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
                             <img src="images/slides/slider_3.jpg" alt="slider-image" />
-                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">                            
-                                Nationwide Warranty
-                            </div>  
-                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">                       
-                                Our warranty rights are protected
-                            </div>    
+                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                ${图片3介绍文字1占位符}
+                            </div>
+                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                ${图片3介绍文字2占位符}
+                            </div>
                             <div class="tp-caption sfl flat-button-slider" data-x="415" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Read More</a>
                             </div>
@@ -256,17 +182,17 @@
 
                             <div class="tp-caption sfr flat-button-slider style1" data-x="615" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Click Here</a>
-                            </div>                   
+                            </div>
                         </li>
 
                         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
                             <img src="images/slides/slider_4.jpg" alt="slider-image" />
-                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">                            
-                                Air Conditioning Service
-                            </div>  
-                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">                       
-                                From just $99 + parts and Gas
-                            </div>    
+                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                ${图片4介绍文字1占位符}
+                            </div>
+                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                ${图片4介绍文字2占位符}
+                            </div>
                             <div class="tp-caption sfl flat-button-slider" data-x="415" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Read More</a>
                             </div>
@@ -277,19 +203,21 @@
 
                             <div class="tp-caption sfr flat-button-slider style1" data-x="615" data-y="250" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut">
                                 <a href="#" class="button-slider">Click Here</a>
-                            </div>                   
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div><!--  /.site-header -->
-        
+            </div> <!-- /.轮播图 -->
+
+        </div><!--  /.header end -->
+        <!-- body -->
         <div id="site-content">
+            <!--供应商-->
             <section class="client">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h4>THE BRANDS WE TRUST.</h4>
+                            <h4>我们的供应商</h4>
                         </div>
                         <div class="col-md-8">
                             <div class="wrap-img-client">
@@ -312,7 +240,7 @@
                 </div>
             </section>
 
-            <!-- Services -->
+            <!-- 服务 -->
             <section class="flat-row services pad-bottom0px">
                 <div class="container">
                     <div class="row">
@@ -367,7 +295,7 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->   
             </section><!-- /.flat-row -->
-
+            <!--流程-->
             <section class="flat-row parallax parallax1 pad-top70px pad-bottom70px">
                 <div class="container">
                     <div class="row">
@@ -438,7 +366,7 @@
                 </div><!-- /.container -->
             </section><!-- /.flat-row -->
 
-            <!-- About us -->
+            <!-- 关于我们 -->
             <section class="flat-row popup pad-top70px pad-bottom70px">
                 <div class="container">
                     <div class="row">
@@ -505,7 +433,7 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.flat-row -->
-
+            <!--队伍-->
             <section class="flat-row flat-bg-white pad-top70px pad-bottom70px">
                 <div class="container">
                     <div class="row">
@@ -859,7 +787,7 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.flat-row -->
-
+            <!--评价-->
             <section class="flat-row parallax parallax2 pad-top100px pad-bottom100px">
                 <div class="container">
                     <div class="row">
@@ -911,7 +839,7 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.flat-row -->
-
+            <!--博文-->
             <section class="flat-row flat-bg-white blog blog-grid pad-top70px pad-bottom20px">
                 <div class="container">
                     <div class="row">
@@ -1026,7 +954,7 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.flat-row -->
-
+            <!--产品展/图片展-->
             <section class="flat-row home-v1 gallery pad-top0px pad-bottom0px">
                 <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
                     <div class="project-wrap five-columns ">
@@ -1122,18 +1050,18 @@
                     </div><!-- /.project-wrap -->
                 </div><!-- /.flat-project -->
             </section><!-- /.flat-row -->
-
-            <!---<section class="flat-row pad-top0px pad-bottom0px">
-                <div class="flat-accordion style1">
-                    <div class="flat-toogle">
-                        <h3 class="toggle-title active">VIEW US ON THE MAP</h3>
-                        <div class="toggle-content">
-                            <div id="flat-map"></div>  
-                        </div>
-                    </div><!-- /.flat-toggle -->
-                </div><!-- /.flat-accordion -->
-            </section><!-- /.flat-row -->
-        </div><!--/.site-content -->
+            <!--地图-->
+            <section class="flat-row pad-top0px pad-bottom0px">
+            <div class="flat-accordion style1">
+                <div class="flat-toogle">
+                    <h3 class="toggle-title active">VIEW US ON THE MAP</h3>
+                    <div class="toggle-content">
+                        <div id="flat-map"></div>
+                    </div>
+                </div><!-- /.flat-toggle -->
+            </div><!-- /.flat-accordion -->
+        </section><!-- /.flat-row -->
+        </div><!--/.body end -->
 
         <div class="site-footer">
             <div class="footer-widgets">
