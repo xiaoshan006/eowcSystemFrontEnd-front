@@ -3,7 +3,7 @@
 
 /* Smaller than standard 1200 */
 @media only screen and (max-width: 1199px) {
-	code here...
+
 }
 
 /* Smaller than standard 992 */
@@ -231,19 +231,19 @@
 	@media 
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (   min--moz-device-pixel-ratio: 2),
-	only screen and (   -moz-min-device-pixel-ratio: 2),
+
 	only screen and (     -o-min-device-pixel-ratio: 2/1),
 	only screen and (        min-device-pixel-ratio: 2),
 	only screen and (                min-resolution: 192dpi),
 	only screen and (                min-resolution: 2dppx) {
 
 	.flat-accordion .toggle-title:after {
-		background: url("../images/icon/add@2x.png");
+
 		background-size: 26px 26px;
 	}
 
 	.widget_search .search-form .search-submit {
-		background: url("../images/icon/search-icon@2x.png");
+
 		background-size: 30px 30px;
 	}
 }
