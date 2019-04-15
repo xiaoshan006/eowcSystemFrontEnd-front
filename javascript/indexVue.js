@@ -1,25 +1,3 @@
-/*
-//定义组件
-var serviceItem = Vue.extend({
-    template: '<div class="images-single object">\n' +
-'                   <div class="thumb">\n' +
-'                        <a class="img-post" href="services-inspection.html">\n' +
-'                            <img src="images/services/1.jpg" alt="image">\n' +
-'                        </a>\n' +
-'                   </div><!-- /.thumb-->\n' +
-'                   <div class="desc-img">\n' +
-'                        <h4 class="title">result.descTitle</h4>\n' +
-'                        <div class="content">A Anycar Inspection is a comprehensive Vehicle Inspection advising the current state of the vehicle. It is a great way to receive independent advice…\n' +
-'                   </div>\n' +
-'                        <a class="button white">Offer Details</a>\n' +
-'                   </div><!-- /.desc-img -->\n' +
-        '     </div><!-- /.images-single -->'
-})
-// 注册组件
-Vue.component('service', serviceItem)*/
-
-
-
 //创建轮播图实例
 var bannerUl = new Vue({
     el: '#banners',

@@ -20,267 +20,272 @@
         <!--  /.header end -->
 
         <!-- main -->
-        <!-- 轮播图 -->
-        <div class="tp-banner-container">
-            <div class="tp-banner" >
-                <ul id="banners">
+        <div id="site-content">
 
-                    <template v-for="item in result">
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-                        <img v-bind:src=item.src src="images/slides/slider_1.jpg" alt="slider-image" />
-                        <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
-                            {{item.bannerTitle}}
-                        </div>
-                        <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
-                            {{item.bannerDesc}}
-                        </div>
-                    </li>
-                    </template>
+            <!-- 轮播图 -->
+            <div class="tp-banner-container">
+                <div class="tp-banner" >
+                    <ul id="banners">
 
-                </ul>
-            </div>
-        </div> <!-- /.轮播图 -->
-
-        <!--供应商-->
-        <section id="clients" v-show="result.isShow" class="client">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h4>我们的供应商</h4>
-                    </div>
-                    <div class="col-md-8">
-
-                        <template v-for="item in result.data">
-                            <div class="wrap-img-client">
-                                <img v-bind:src=item.containerSrc alt="images">
+                        <template v-for="item in result">
+                            <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
+                            <img v-bind:src=item.src src="images/slides/slider_1.jpg" alt="slider-image" />
+                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                {{item.bannerTitle}}
                             </div>
+                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                {{item.bannerDesc}}
+                            </div>
+                        </li>
                         </template>
 
-                    </div>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </div> <!-- /.轮播图 -->
 
-        <!-- 服务 -->
-        <section id="services" v-show="result.isShow" class="flat-row services pad-bottom0px">
-            <div class="container">
-                <div class="row">
-                    <div class="three-columns">
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="title-section">
-                                <h2 class="title">{{result.serviceTitle}}</h2>
-                            </div>
-                        </div><!-- /.col-md-6 -->
-                        <template v-for="item in result.data">
-                            <div class="images-single object">
-                                <div class="thumb">
-                                    <a class="img-post" href="services-inspection.html">
-                                        <img v-bind:src="item.serviceSrc" alt="image">
-                                    </a>
-                                </div><!-- /.thumb-->
-                                <div class="desc-img">
-                                    <h4 class="title">{{item.serviceDescTitle}}</h4>
-                                    <div class="content">{{item.serviceDescContent}}</div>
-                                </div><!-- /.desc-img -->
-                            </div><!-- /.images-single -->
-                        </template>
-
-                    </div> <!-- /.three-columns -->
-
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.flat-row -->
-
-        <!--产品展/图片展-->
-        <section id="products" class="flat-row home-v1 gallery pad-top0px pad-bottom0px">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="title-section">
-                        <h2 class="title">{{result.productTitle}}</h2>
-                        <p class="desc-title">{{result.productTitleDesc}}</p>
-                    </div>
-                </div><!-- /.col-md-6 -->
-            </div><!-- /.row -->
-            <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
-                <div class="project-wrap five-columns ">
-
-                    <template v-for="item in result.data">
-                        <div class="object project-item  entry  carglassing">
-                            <div class="item-wrap">
-                                <div class="project-thumb">
-                                    <img v-bind:src="item.src" alt="image">
-                                </div>
-                                <div class="project-info">
-                                    <h3 class="project-title">
-                                        <a>{{item.productItemName}}</a>
-                                    </h3>
-                                    <ul class="project-categories">
-                                        <li><a>{{item.productItemDesc}}</a></li>
-                                    </ul>
-                                </div>
-                            </div><!-- /.item-wrap -->
-                        </div><!-- /.project-item -->
-                    </template>
-
-                </div><!-- /.project-wrap -->
-            </div><!-- /.flat-project -->
-        </section><!-- /.flat-row -->
-
-        <!--评价-->
-        <section id="evaluates" v-show="result.isShow" v-bind:style="result.backgroundImage" class="flat-row parallax pad-top100px pad-bottom100px">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="title-section">
-                    <h2 class="title" style="color: #ffffff">客户评价</h2>
-                </div>
-            </div><!-- /.col-md-6 -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="flat-testimonial-owl">
+            <!--供应商-->
+            <section id="clients" v-show="result.isShow" class="client">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>我们的供应商</h4>
+                        </div>
+                        <div class="col-md-8">
 
                             <template v-for="item in result.data">
-                                <div class="flat-testimonial">
-                                    <div class="testimonial-content">
-                                        <p>{{item.evaluateContents}}</p>
-                                    </div>
-                                    <div class="testimonial-meta">
-                                        <div class="testimonial-image">
-                                            <img src="images/testimonials/star.png" alt="images">
-                                        </div>
-                                        <div class="testimonial-author">
-                                            <strong class="author-name">{{item.evaluaterName}}</strong>
-                                            <div class="author-info">
-                                                <span class="subtitle">{{item.evaluatePosition}}</span>
-                                                <span class="divider">-</span>
-                                                <span class="company">{{item.evaluateCompany}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.flat-testimonial -->
+                                <div class="wrap-img-client">
+                                    <img v-bind:src=item.containerSrc alt="images">
+                                </div>
                             </template>
-                        </div><!-- /.flat-testimonial-owl -->
-                    </div><!-- /.col-md-8 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.flat-row -->
 
-        <!--人才队伍-->
-        <section id="talents" v-show="result.isShow" class="flat-row flat-bg-white pad-top70px pad-bottom70px">
-            <div class="container">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 服务 -->
+            <section id="services" v-show="result.isShow" class="flat-row services pad-bottom0px">
+                <div class="container">
+                    <div class="row">
+                        <div class="three-columns">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="title-section">
+                                    <h2 class="title">{{result.serviceTitle}}</h2>
+                                </div>
+                            </div><!-- /.col-md-6 -->
+                            <template v-for="item in result.data">
+                                <div class="images-single object">
+                                    <div class="thumb">
+                                        <a class="img-post" href="services-inspection.html">
+                                            <img v-bind:src="item.serviceSrc" alt="image">
+                                        </a>
+                                    </div><!-- /.thumb-->
+                                    <div class="desc-img">
+                                        <h4 class="title">{{item.serviceDescTitle}}</h4>
+                                        <div class="content">{{item.serviceDescContent}}</div>
+                                    </div><!-- /.desc-img -->
+                                </div><!-- /.images-single -->
+                            </template>
+
+                        </div> <!-- /.three-columns -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.flat-row -->
+
+            <!--产品展/图片展-->
+            <section id="products" class="flat-row home-v1 gallery pad-top0px pad-bottom0px">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="title-section">
-                            <h2 class="title">{{result.talentsTitle}}</h2>
-                            <p class="desc-title">{{result.talentsTitleDesc}}</p>
+                            <h2 class="title">{{result.productTitle}}</h2>
+                            <p class="desc-title">{{result.productTitleDesc}}</p>
                         </div>
                     </div><!-- /.col-md-6 -->
                 </div><!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="member-carousel">
+                <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
+                    <div class="project-wrap five-columns ">
 
-                            <template v-for="item in result.data">
-                                <article class="member entry object">
-                                    <div class="member-image">
-                                        <img v-bind:src="item.src" alt="img">
-                                        <div class="member-links">
-                                            <div class="social-links">
-                                                <a target="_blank" v-bind:href="item.qqHref">
-                                                    <i class="fa fa-qq"></i>
-                                                </a>
-                                                <a>
-                                                    <el-popover
-                                                            placement="bottom"
-                                                            title="微信公众号"
-                                                            width="200"
-                                                            trigger="click">
-                                                        <img :src="item.weixinSrc"/>
-                                                        <i class="fa fa-weixin" slot="reference"></i>
-                                                    </el-popover>
-                                                </a>
-                                            </div>
-                                        </div>
+                        <template v-for="item in result.data">
+                            <div class="object project-item  entry  carglassing">
+                                <div class="item-wrap">
+                                    <div class="project-thumb">
+                                        <img v-bind:src="item.src" alt="image">
                                     </div>
-
-                                    <div class="member-detail">
-                                        <h3 class="member-name">{{item.talentsName}}</h3>
-                                        <p class="member-subtitle">{{item.talentPosition}}</p>
-                                        <ul class="member-meta">
-                                            <li class="member-phone">
-                                                <span>Tel:</span>{{item.talentTel}}
-                                            </li>
-                                            <li class="member-email">
-                                                <a>
-                                                    {{item.talentEmail}}
-                                                </a>
-                                            </li>
+                                    <div class="project-info">
+                                        <h3 class="project-title">
+                                            <a>{{item.productItemName}}</a>
+                                        </h3>
+                                        <ul class="project-categories">
+                                            <li><a>{{item.productItemDesc}}</a></li>
                                         </ul>
                                     </div>
-                                </article>
-                            </template>
+                                </div><!-- /.item-wrap -->
+                            </div><!-- /.project-item -->
+                        </template>
 
-                        </div><!-- /.main-content-wrap -->
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.flat-row -->
+                    </div><!-- /.project-wrap -->
+                </div><!-- /.flat-project -->
+            </section><!-- /.flat-row -->
 
-        <!-- 关于我们 -->
-        <section id="aboutUs" v-show="result.isShow" class="flat-row popup pad-top70px pad-bottom70px">
-            <div class="container">
-                <!--标题-->
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="title-section">
-                            <h2 class="title">{{result.aboutUsTitle}}</h2>
-                            <p class="desc-title">{{result.aboutUsDesc}}</p>
-                        </div>
-                    </div><!-- /.col-md-6 -->
-                </div><!-- /.row -->
+            <!--评价-->
+            <section id="evaluates" v-show="result.isShow" v-bind:style="result.backgroundImage" class="flat-row parallax pad-top100px pad-bottom100px">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="title-section">
+                        <h2 class="title" style="color: #ffffff">客户评价</h2>
+                    </div>
+                </div><!-- /.col-md-6 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="flat-testimonial-owl">
 
-                <div class="flat-divider d50px"></div>
+                                <template v-for="item in result.data">
+                                    <div class="flat-testimonial">
+                                        <div class="testimonial-content">
+                                            <p>{{item.evaluateContents}}</p>
+                                        </div>
+                                        <div class="testimonial-meta">
+                                            <div class="testimonial-image">
+                                                <img src="images/testimonials/star.png" alt="images">
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <strong class="author-name">{{item.evaluaterName}}</strong>
+                                                <div class="author-info">
+                                                    <span class="subtitle">{{item.evaluatePosition}}</span>
+                                                    <span class="divider">-</span>
+                                                    <span class="company">{{item.evaluateCompany}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.flat-testimonial -->
+                                </template>
+                            </div><!-- /.flat-testimonial-owl -->
+                        </div><!-- /.col-md-8 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.flat-row -->
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <!--图片-->
-                        <div class="images-single-flexslider">
-                            <ul class="slides">
+            <!--人才队伍-->
+            <section id="talents" v-show="result.isShow" class="flat-row flat-bg-white pad-top70px pad-bottom70px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="title-section">
+                                <h2 class="title">{{result.talentsTitle}}</h2>
+                                <p class="desc-title">{{result.talentsTitleDesc}}</p>
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="member-carousel">
 
-                                <template v-for="item in result.img">
-                                    <li>
-                                        <a class="img-post popup-gallery" v-bind:href="item.src"><img v-bind:src="item.src" alt="image"></a>
-                                    </li>
+                                <template v-for="item in result.data">
+                                    <article class="member entry object">
+                                        <div class="member-image">
+                                            <img v-bind:src="item.src" alt="img">
+                                            <div class="member-links">
+                                                <div class="social-links">
+                                                    <a target="_blank" v-bind:href="item.qqHref">
+                                                        <i class="fa fa-qq"></i>
+                                                    </a>
+                                                    <a>
+                                                        <el-popover
+                                                                placement="bottom"
+                                                                title="微信公众号"
+                                                                width="200"
+                                                                trigger="click">
+                                                            <img :src="item.weixinSrc"/>
+                                                            <i class="fa fa-weixin" slot="reference"></i>
+                                                        </el-popover>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="member-detail">
+                                            <h3 class="member-name">{{item.talentsName}}</h3>
+                                            <p class="member-subtitle">{{item.talentPosition}}</p>
+                                            <ul class="member-meta">
+                                                <li class="member-phone">
+                                                    <span>Tel:</span>{{item.talentTel}}
+                                                </li>
+                                                <li class="member-email">
+                                                    <a>
+                                                        {{item.talentEmail}}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </article>
                                 </template>
 
-                            </ul>
-                        </div><!-- /.images-single-flexslider -->
-                    </div><!-- /.col-md-4 -->
+                            </div><!-- /.main-content-wrap -->
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.flat-row -->
 
-                    <div class="col-md-4">
-                        <div class="flat-about-us">
-                            <span class="dropcap">{{result.aboutUsFirstWord}}</span>
-                            {{result.aboutUsContent}}
-                            <a class="button white">Read More</a>
-                        </div><!-- /.flat-about-us -->
-                    </div><!-- /.col-md-4 -->
+            <!-- 关于我们 -->
+            <section id="aboutUs" v-show="result.isShow" class="flat-row popup pad-top70px pad-bottom70px">
+                <div class="container">
+                    <!--标题-->
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="title-section">
+                                <h2 class="title">{{result.aboutUsTitle}}</h2>
+                                <p class="desc-title">{{result.aboutUsDesc}}</p>
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
 
-                    <div class="col-md-4">
-                        <div class="flat-progress-bar">
+                    <div class="flat-divider d50px"></div>
 
-                            <template v-for="item in result.data">
-                                <div class="flat-progress">
-                                    <p class="name">{{item.aboutUsAdvantage}}</p>
-                                    <div class="progress-bar" v-bind:data-percent="item.percent" data-waypoint-active="yes">
-                                        <div class="progress-animate"></div>
-                                    </div>
-                                </div><!-- /.flat-progress -->
-                            </template>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!--图片-->
+                            <div class="images-single-flexslider">
+                                <ul class="slides">
 
-                        </div><!-- /.flat-progress -->
-                    </div><!-- /.col-md-4 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.flat-row -->
+                                    <template v-for="item in result.img">
+                                        <li>
+                                            <a class="img-post popup-gallery" v-bind:href="item.src"><img v-bind:src="item.src" alt="image"></a>
+                                        </li>
+                                    </template>
+
+                                </ul>
+                            </div><!-- /.images-single-flexslider -->
+                        </div><!-- /.col-md-4 -->
+
+                        <div class="col-md-4">
+                            <div class="flat-about-us">
+                                <span class="dropcap">{{result.aboutUsFirstWord}}</span>
+                                {{result.aboutUsContent}}
+                                <a class="button white">Read More</a>
+                            </div><!-- /.flat-about-us -->
+                        </div><!-- /.col-md-4 -->
+
+                        <div class="col-md-4">
+                            <div class="flat-progress-bar">
+
+                                <template v-for="item in result.data">
+                                    <div class="flat-progress">
+                                        <p class="name">{{item.aboutUsAdvantage}}</p>
+                                        <div class="progress-bar" v-bind:data-percent="item.percent" data-waypoint-active="yes">
+                                            <div class="progress-animate"></div>
+                                        </div>
+                                    </div><!-- /.flat-progress -->
+                                </template>
+
+                            </div><!-- /.flat-progress -->
+                        </div><!-- /.col-md-4 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.flat-row -->
+
+        </div>
+        <!--/.main end -->
 
         <!-- footer -->
         <div class="site-footer">
@@ -288,7 +293,6 @@
         </a><!-- /. Go Top End-->
             <div id="footer"></div>
         </div>
-
         <!--  /.footer end -->
 
     </div>

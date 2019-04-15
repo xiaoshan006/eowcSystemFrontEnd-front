@@ -18,3 +18,4 @@ document.writeln("    <script type=\'text/javascript\' src=\'javascript/jquery.t
 document.writeln("    <script type=\'text/javascript\' src=\'javascript/slider.js\'></script>");
 document.writeln("    <!-- 自定义 -->");
 document.writeln("<script src=\'javascript/indexVue.js\'></script>");
+document.writeln("<script src=\'javascript/aboutVue.js\'></script>");
