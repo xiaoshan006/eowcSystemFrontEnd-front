@@ -72,7 +72,7 @@ var servicesDiv= new Vue({
                         "serviceDesc":"下载内容描述2"
                     }
                 ],
-
+                "backgroundImage":"background-image:url(./images/parallax/2.jpg)",
                 "servicesTitle":"我们的服务(标题)",
                 "servicesTitleDesc":"我们的服务一句话简介",
                 "topIsShow": true,

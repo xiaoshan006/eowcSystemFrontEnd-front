@@ -17,6 +17,21 @@ document.writeln("    <script type=\'text/javascript\' src=\'javascript/jquery.t
 document.writeln("    <script type=\'text/javascript\' src=\'javascript/jquery.themepunch.revolution.min.js\'></script>");
 document.writeln("    <script type=\'text/javascript\' src=\'javascript/slider.js\'></script>");
 document.writeln("    <!-- 自定义 -->");
-document.writeln("<script src=\'javascript/indexVue.js\'></script>");
-document.writeln("<script src=\'javascript/aboutVue.js\'></script>");
-document.writeln("<script src=\'javascript/servicesVue.js\'></script>");
+
+var href = window.location.href;
+if (href.indexOf("index.html") != -1) {
+    document.writeln("<script src=\'javascript/indexVue.js\'></script>");
+}
+if (href.indexOf("about.html") != -1) {
+    document.writeln("<script src=\'javascript/aboutVue.js\'></script>");
+}
+if (href.indexOf("services.html") != -1) {
+    document.writeln("<script src=\'javascript/servicesVue.js\'></script>");
+}
+if (href.indexOf("services-inspection.html") != -1) {
+    document.writeln("<script src=\'javascript/serviceItemVue.js\'></script>");
+}
+if (href.indexOf("gallery.html") != -1) {
+    document.writeln("<script src=\'javascript/galleryVue.js\'></script>");
+}
+

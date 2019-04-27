@@ -472,7 +472,6 @@ input[type="color"],
 	     -o-box-shadow: none;
 	        box-shadow: none;
 	color: #333;
-    font-family: 'Playfair Display', serif;
     font-style: italic;
 }
 
@@ -1502,7 +1501,6 @@ div#flat-site-navigator-sticky-wrapper {
 .page-title .subtitle {
     font-size: 18px;
     font-style: italic;
-    font-family: 'Playfair Display', serif;
     color: #fff;
     margin:  0 0 39px 0 ;
 }
@@ -1654,7 +1652,6 @@ div#flat-site-navigator-sticky-wrapper {
 }
 
 .blog .entry .entry-meta {
-	font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #ccc;
     margin-bottom: 15px;
@@ -2081,7 +2078,6 @@ a.download:hover {
 }
 
 .widget.widget-recentpost ul li .text .entry-time {
-	font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #ccc;
     font-size: 13px;

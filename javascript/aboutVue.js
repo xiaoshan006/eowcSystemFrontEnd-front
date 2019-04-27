@@ -79,6 +79,7 @@ var aboutTeamDiv= new Vue({
                         "talentEmail":"XXX.Gmail.com"
                     }
                 ],
+                "backgroundImage":"background-image:url(./images/parallax/1.jpg)",
                 "talentsTitle":"人才队伍",
                 "talentsTitleDesc":"这里是一句话简介",
 
