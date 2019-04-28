@@ -28,18 +28,18 @@
                     <div class="col-md-12" style="margin-bottom: 10px">
                         <div class="page-title-heading" style="text-align: center; ">
                             <h1 class="title" >联系我们</h1>
-                            <p class="subtitle">期待您的留言</p>
+                            <p class="subtitle">期待您的留言,我们将尽快给您回复！</p>
                         </div><!-- /.page-title-captions -->
                     </div><!-- /.col-md-12 -->
 
                     <div class="col-md-8 col-md-offset-2">
-                        <div class="quick-appoinment">
+                        <div class="quick-appoinment" id="contactForm">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input style="font-style: normal;" type="text" id="name" name="name" class="input-text-name" placeholder="姓名" required="required">
+                                        <input style="font-style: normal;width: 99%" type="text" v-model="message.name" placeholder="姓名" required="required"><span style="color: red;float: right;width: 1%;line-height: 52px;">*</span>
                                     </div><!-- /.col-md-6 -->
                                     <div class="col-md-6">
-                                        <input style="font-style: normal;" type="text" id="email" name="email" class="input-text-email" placeholder="Email" required="required">
+                                        <input style="font-style: normal;width: 99%" type="text" v-model="message.email"  placeholder="Email" required="required"><span style="color: red;float: right;width: 1%;line-height: 52px;">*</span>
                                     </div><!-- /.col-md-6 -->
                                 </div><!-- /.row -->
 
@@ -47,10 +47,14 @@
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input style="font-style: normal;" type="text" id="phone" name="phone" class="input-text-phone" placeholder="电子邮件" required="required">
+                                        <input style="font-style: normal;width: 99%" type="text" v-model="message.phone" id="phone" name="phone" placeholder="联系电话" required="required"><span style="color: red;float: right;width: 1%;line-height: 52px;">*</span>
                                     </div><!-- /.col-md-6 -->
                                     <div class="col-md-6">
-                                        <input style="font-style: normal;" type="text" id="subject" name="subject" class="input-text-subject" placeholder="主题" required="required">
+                                        <select style="width: 99%" v-model="message.topic">
+                                            <template v-for="item in result.topic">
+                                                <option v-bind:value="item.value">{{item.name}}</option>
+                                            </template>
+                                        </select><span style="color: red;float: right;width: 1%;line-height: 52px;">*</span>
                                     </div><!-- /.col-md-6 -->
                                 </div><!-- /.row -->
 
@@ -58,7 +62,8 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <textarea style="font-style: normal;" class="textarea-question" id="message" name="message" placeholder="留言" required="required"></textarea>
+                                        <textarea :maxlength="result.msgLength" style="font-style: normal;width: 99%" v-model="message.msg" placeholder="留言" required="required"></textarea><span style="color: red;float: right;width: 1%;line-height: 52px;">*</span>
+                                        <span style="float: right">您还可以输入：{{result.msgLength-message.msg.length}}</span>
                                     </div><!-- /.col-md-12 -->
                                 </div><!-- /.row -->
 

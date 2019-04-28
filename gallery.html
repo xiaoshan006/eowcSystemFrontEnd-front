@@ -19,76 +19,77 @@
     <!--  /.header end -->
         
         <div id="site-content">
+            <div id="productsInfoDiv">
+                <!-- Page title -->
+                <div class="flat-row page-title  parallax parallax1" v-bind:style="result.backgroundImage" style="margin-bottom: 50px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="page-title-heading" style="text-align: center">
+                                    <h1 class="title" style="color: #ffffff">{{result.productShowTitle}}</h1>
+                                    <p class="subtitle">{{result.productShowDesc}}</p>
+                                </div><!-- /.page-title-captions -->
+                                <div class="breadcrumbs">
+                                    <p>你的位置:</p>
+                                    <ul>
+                                        <li><a href="index.html">首页</a></li>
+                                        <li class="active">产品展示</li>
+                                    </ul>
+                                </div><!-- /.breadcrumbs -->
+                            </div><!-- /.col-md-12 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div><!-- /.page-title -->
 
-            <!-- Page title -->
-            <div class="flat-row page-title  parallax parallax1" v-bind:style="result.backgroundImage" style="margin-bottom: 50px">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-title-heading" style="text-align: center">
-                                <h1 class="title" style="color: #ffffff">{{result.productShowTitle}}</h1>
-                                <p class="subtitle">{{result.productShowDesc}}</p>
-                            </div><!-- /.page-title-captions -->
-                            <div class="breadcrumbs">
-                                <p>你的位置:</p>
-                                <ul>
-                                    <li><a href="index.html">首页</a></li>
-                                    <li class="active">产品展示</li>
-                                </ul>
-                            </div><!-- /.breadcrumbs -->
-                        </div><!-- /.col-md-12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div><!-- /.page-title -->
+                <!-- Gallery -->
+                <section class="gallery">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
+                                    <!--分类-->
+                                    <div class="controlnav-folio">
+                                        <ul class="project-filter">
+                                            <li class="active"><a data-filter="*" href="#">All</a></li>
 
-            <!-- Gallery -->
-            <section class="gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div  id="productsInfoDiv" class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
-                                <!--分类-->
-                                <div class="controlnav-folio">
-                                    <ul class="project-filter">
-                                        <li class="active"><a data-filter="*" href="#">All</a></li>
+                                            <template v-for="item in result.classificationData">
+                                                <li><a v-bind:data-filter="item.classTags" href="#">{{item.className}}</a></li>
+                                            </template>
 
-                                        <template v-for="item in result.classificationData">
-                                            <li><a v-bind:data-filter="item.classTags" href="#">{{item.className}}</a></li>
+                                        </ul><!-- /.project-filter -->
+                                    </div>
+                                    <!--图片-->
+                                    <div class="project-wrap four-columns popup">
+
+                                        <template v-for="item in result.productsInfo">
+                                            <div class="object project-item entry" v-bind:class="item.productClass">
+                                                <div class="item-wrap">
+                                                    <div class="project-thumb">
+                                                        <a class="img-post popup-gallery" v-bind:href="item.productImg">
+                                                            <img v-bind:src="item.productImg" alt="image">
+                                                        </a>
+                                                    </div>
+                                                    <div class="project-info" style="padding: 0px 3px 0px 10px;">
+                                                        <h3 class="project-title">
+                                                            <a>{{item.productName}}</a>
+                                                        </h3>
+                                                        <ul class="project-categories">
+                                                            <li><a>{{item.productDesc}}</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- /.item-wrap -->
+                                            </div><!-- /.project-item -->
                                         </template>
 
-                                    </ul><!-- /.project-filter -->
-                                </div>
-                                <!--图片-->
-                                <div class="project-wrap four-columns popup">
+                                    </div><!-- /.project-wrap -->
+                                </div><!-- /.flat-project -->
+                            </div> <!-- /.col-md-12 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </section>
 
-                                    <template v-for="item in result.productsInfo">
-                                        <div class="object project-item entry" v-bind:class="item.productClass">
-                                            <div class="item-wrap">
-                                                <div class="project-thumb">
-                                                    <a class="img-post popup-gallery" v-bind:href="item.productImg">
-                                                        <img v-bind:src="item.productImg" alt="image">
-                                                    </a>
-                                                </div>
-                                                <div class="project-info" style="padding: 0px 3px 0px 10px;">
-                                                    <h3 class="project-title">
-                                                        <a>{{item.productName}}</a>
-                                                    </h3>
-                                                    <ul class="project-categories">
-                                                        <li><a>{{item.productDesc}}</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div><!-- /.item-wrap -->
-                                        </div><!-- /.project-item -->
-                                    </template>
-
-                                </div><!-- /.project-wrap -->
-                            </div><!-- /.flat-project -->
-                        </div> <!-- /.col-md-12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </section>
-
-            <div class="flat-divider d50px"></div>
+                <div class="flat-divider d50px"></div>
+            </div>
         </div><!--/.site-content -->
 
     <!-- footer -->

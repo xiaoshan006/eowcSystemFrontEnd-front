@@ -34,4 +34,10 @@ if (href.indexOf("services-inspection.html") != -1) {
 if (href.indexOf("gallery.html") != -1) {
     document.writeln("<script src=\'javascript/galleryVue.js\'></script>");
 }
+if (href.indexOf("contact.html") != -1) {
+    document.writeln("<script src=\'javascript/contactVue.js\'></script>");
+}
+if (href.indexOf("news.html") != -1) {
+    document.writeln("<script src=\'javascript/newsVue.js\'></script>");
+}
 

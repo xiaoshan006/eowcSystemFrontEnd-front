@@ -71,7 +71,7 @@
 	.client .wrap-img-client,
 	.flat-clients,
 	.flat-project .project-filter li {
-		margin-bottom: 15px;
+		margin-bottom: 4px;
 	}
 
 	.images-single-flexslider,
@@ -182,7 +182,7 @@
 	}
 
 	.site-footer .social-links {
-		margin-bottom: 15px;
+		margin-bottom: 4px;
 	}
 
 	#pricing .three-columns .object,
