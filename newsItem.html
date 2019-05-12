@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="javascript/headerJsLoader.js"></script>
+</head>
+
+<body class="header-sticky">
+<section class="loading-overlay">
+    <div class="Loading-Page">
+        <h2 class="loader">Loading...</h2>
+    </div>
+</section>
+<div id="site-wrapper">
+
+    <!-- header -->
+    <div id="site-header"></div>
+    <!--  /.header end -->
+
+    <!-- main -->
+    <div id="site-content" style="margin-top: 20px">
+            <section class="blog sidebar-left">
+                <div class="container" id="newsItemDiv">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-wrap">
+                                <article class="entry">
+                                    <div class="feature-post popup" style="text-align: center">
+                                        <img :src="result.newsSrc" alt="image">
+                                    </div><!-- /.feature-post -->
+                                    <div class="main-post">
+                                        <h3 class="entry-title">{{result.newsTitle}}</h3>
+                                        <div class="entry-meta">
+                                            <span class="entry-categories">
+                                                <template v-for="item in result.newsType">
+                                                    <a>{{item}}</a>,
+                                                </template>
+                                            </span>
+                                            <span class="entry-time">{{result.newsTime}}</span>
+                                        </div>
+                                        <div class="entry-content" v-html="result.newsText"></div>
+                                        <button @click="backUp()" class="button white">返回</button>
+                                    </div><!-- /.main-post -->
+                                </article><!-- /.entry -->
+                            </div><!-- /.post-wrap -->
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->   
+            </section>
+    </div><!--/.end main-->
+
+    <!-- footer -->
+    <div class="site-footer">
+        <a class="go-top">
+        </a><!-- /. Go Top End-->
+        <div id="footer"></div>
+    </div>
+    <!--  /.footer end -->
+
+</div>  <!-- /.site-wrapper -->
+<script src="javascript/footerJsLoader.js"></script>
+</body>
+</html>
+

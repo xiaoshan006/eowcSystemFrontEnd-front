@@ -61,15 +61,6 @@ var servicesDiv= new Vue({
                     {
                         "serviceName":"下载内容标题2",
                         "serviceDesc":"下载内容描述2"
-                    },
-                    {
-                        "serviceName":"下载内容标题1",
-                        "serviceDesc":"下载内容描述1"
-
-                    },
-                    {
-                        "serviceName":"下载内容标题2",
-                        "serviceDesc":"下载内容描述2"
                     }
                 ],
                 "backgroundImage":"background-image:url(./images/parallax/2.jpg)",
