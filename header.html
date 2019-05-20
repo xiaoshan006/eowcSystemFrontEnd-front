@@ -2,16 +2,16 @@
 
 <script src="javascript/headerVue.js"></script>
 
-    <div id="headerbar" v-show="result.isShow">
+    <div id="headerbar" v-show="result.cBarShow">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="custom-info">
-                        </i>{{result.data}}
+                        </i>{{result.cHeaderText}}
                     </div>
                     <!--联系页面-->
                     <div class="social-links">
-                        <a style="margin-left: -10px;" target="_blank" :href="result.qqHref">
+                        <a style="margin-left: -10px;" target="_blank" :href="result.cQqHref">
                             <i class="fa fa-qq"></i> <!--QQ在线-->
                         </a>
                         <a>
@@ -20,7 +20,7 @@
                                 title="微信号"
                                 width="200"
                                 trigger="click">
-                                <img :src="result.weixinSrc"/>
+                                <img :src="result.cWinxinSrc"/>
                                 <i class="fa fa-weixin" slot="reference"></i>
                             </el-popover>
                         </a>
@@ -35,7 +35,7 @@
                             <!--<li><a href="#">404 Page</a></li>-->
                             <!--</ul>-->
                             <!--</li>-->
-                            <li><a href="#">登录</a></li>
+                            <li><a href="http://localhost:63342/twts_172_bootstrap4material/login.html">登录</a></li>
                         </ul>
                     </nav><!-- /.顶部导航 -->
                 </div>
@@ -50,7 +50,7 @@
                     <div class="header-wrap clearfix">
                         <div id="logo" class="logo">
                             <a href="index.html" rel="home">
-                                <img :src="result.logoSrc" alt="image">
+                                <img :src="result.cHeardLogo" alt="image">
                             </a>
                         </div><!-- /.LOGO -->
                         <div class="nav-wrap">

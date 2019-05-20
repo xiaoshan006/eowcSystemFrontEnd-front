@@ -1,4 +1,6 @@
-
+axios.defaults.baseURL = 'http://localhost:8080'; // 设置域名
+axios.defaults.withCredentials = true;
+axios.defaults.headers['Content-Type'] = 'application/json';
 var headerbarDiv = new Vue({
     el: '#headerbar',
     data: function () {
@@ -12,12 +14,13 @@ var headerbarDiv = new Vue({
     },
     methods: {
         setData: function () {
-            this.result ={
-                "data":"企业运营理念在此处展示",
-                "isShow": true,
-                "qqHref":"Https://qq.com/",
-                "weixinSrc":"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-            };
+            axios.get("/api/home/heardInfo").then((response) => {
+                var stateCode = response.data.stateCode;
+                if ("2005" == stateCode) {
+                    //数据获取成功
+                    this.result = Object.assign(response.data.result);
+                }
+            });
         }
     }
 });
@@ -34,9 +37,13 @@ var headerDiv = new Vue({
     },
     methods: {
         setData: function () {
-            this.result ={
-                "logoSrc": "images/logo.png"
-            };
+            axios.get("/api/home/heardInfo").then((response) => {
+                var stateCode = response.data.stateCode;
+                if ("2005" == stateCode) {
+                    //数据获取成功
+                    this.result = Object.assign(response.data.result);
+                }
+            });
         }
     }
 });

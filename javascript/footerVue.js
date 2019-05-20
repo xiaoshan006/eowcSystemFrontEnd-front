@@ -1,3 +1,7 @@
+axios.defaults.baseURL = 'http://localhost:8080'; // 设置域名
+axios.defaults.withCredentials = true;
+axios.defaults.headers['Content-Type'] = 'application/json';
+
 //创建供应商实例
 var footerDiv = new Vue({
     el: '#footerInfo',
@@ -12,15 +16,13 @@ var footerDiv = new Vue({
     },
     methods: {
         setData: function () {
-            this.result ={
-                "data":"企业运营理念在此处展示",
-                "logoSrc":"images/logo1.png",
-                "introduction":"We offer a commitment to personalized service for our clients. If you have further questions or need help with a case, please complete our quick form below. A team member will return your message as soon as possible.",
-                "address":"山东省济南市高新区XXX号",
-                "tel":"0538-7444444",
-                "mobile":"14244030666",
-                "email": "mail@llanc.cn"
-            };
+            axios.get("/api/home/footerInfo").then((response) => {
+                var stateCode = response.data.stateCode;
+                if ("2005" == stateCode) {
+                    //数据获取成功
+                    this.result = Object.assign(response.data.result);
+                }
+            });
         }
     }
 });
