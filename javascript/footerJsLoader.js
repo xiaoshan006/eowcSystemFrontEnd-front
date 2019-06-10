@@ -15,7 +15,6 @@ document.writeln("");
 document.writeln("    <!-- Revolution Slider -->");
 document.writeln("    <script type=\'text/javascript\' src=\'javascript/jquery.themepunch.tools.min.js\'></script>");
 document.writeln("    <script type=\'text/javascript\' src=\'javascript/jquery.themepunch.revolution.min.js\'></script>");
-document.writeln("    <script type=\'text/javascript\' src=\'javascript/slider.js\'></script>");
 document.writeln("    <!-- 自定义 -->");
 
 var href = window.location.href;

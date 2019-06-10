@@ -32,13 +32,10 @@ var servicesDiv= new Vue({
                 ],
                 "downloadData":[
                     {
-                        "src":"images/services/1.jpg",
                         "downloadBtnTitle":"下载内容标题1",
                         "downloadBtnDesc":"下载内容描述1"
-
                     },
                     {
-                        "src":"images/services/2.jpg",
                         "downloadBtnTitle":"下载内容标题2",
                         "downloadBtnDesc":"下载内容描述2"
                     }

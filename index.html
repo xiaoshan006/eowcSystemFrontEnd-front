@@ -23,20 +23,20 @@
         <div id="site-content">
 
             <!-- 轮播图 -->
-            <div class="tp-banner-container">
+            <div id="banners" class="tp-banner-container">
                 <div class="tp-banner" >
-                    <ul id="banners">
+                    <ul >
 
-                        <template v-for="item in result">
+                        <template v-for="item in result.banner">
                             <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-                            <img v-bind:src=item.src src="images/slides/slider_1.jpg" alt="slider-image" />
-                            <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
-                                {{item.bannerTitle}}
-                            </div>
-                            <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
-                                {{item.bannerDesc}}
-                            </div>
-                        </li>
+                                <img v-bind:src='item.bSrc' alt="slider-image" />
+                                <div class="tp-caption sfl title-slide center" data-x="center" data-y="80" data-hoffset="0" data-voffset="-20" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                                    {{item.bTitle}}
+                                </div>
+                                <div class="tp-caption sfr title-slide1 center" data-x="center" data-y="130" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
+                                    {{item.bDesc}}
+                                </div>
+                            </li>
                         </template>
 
                     </ul>
@@ -44,7 +44,7 @@
             </div> <!-- /.轮播图 -->
 
             <!--供应商-->
-            <section id="clients" v-show="result.isShow" class="client">
+            <section id="clients" v-show="isShow=='1'?true:false" class="client">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -64,13 +64,14 @@
             </section>
 
             <!-- 服务 -->
-            <section id="services" v-show="result.isShow" class="flat-row services pad-bottom0px">
+            <section id="services" v-show="isShow=='1'?true:false" class="flat-row services pad-bottom0px">
                 <div class="container">
                     <div class="row">
                         <div class="three-columns">
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="title-section">
                                     <h2 class="title">{{result.serviceTitle}}</h2>
+                                    <p class="desc-title">{{result.serviceTitleDesc}}</p>
                                 </div>
                             </div><!-- /.col-md-6 -->
                             <template v-for="item in result.data">
@@ -94,7 +95,7 @@
             </section><!-- /.flat-row -->
 
             <!--产品展/图片展-->
-            <section id="products" class="flat-row home-v1 gallery pad-top0px pad-bottom0px">
+            <section id="products" v-show="isShow=='1'?true:false" class="flat-row home-v1 gallery pad-top0px pad-bottom0px">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="title-section">
@@ -129,7 +130,7 @@
             </section><!-- /.flat-row -->
 
             <!--评价-->
-            <section id="evaluates" v-show="result.isShow" v-bind:style="result.backgroundImage" class="flat-row parallax pad-top100px pad-bottom100px">
+            <section id="evaluates" v-show="isShow=='1'?true:false" v-bind:style="result.backgroundImage" class="flat-row parallax pad-top100px pad-bottom100px">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="title-section">
                         <h2 class="title" style="color: #ffffff">客户评价</h2>
@@ -167,7 +168,7 @@
             </section><!-- /.flat-row -->
 
             <!--人才队伍-->
-            <section id="talents" v-show="result.isShow" class="flat-row flat-bg-white pad-top70px pad-bottom70px">
+            <section id="talents" v-show="isShow=='1'?true:false" class="flat-row flat-bg-white pad-top70px pad-bottom70px">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
@@ -228,14 +229,13 @@
             </section><!-- /.flat-row -->
 
             <!-- 关于我们 -->
-            <section id="aboutUs" v-show="result.isShow" class="flat-row popup pad-top70px pad-bottom70px">
+            <section id="aboutUs" v-show="isShow=='1'?true:false" class="flat-row popup pad-top70px pad-bottom70px">
                 <div class="container">
                     <!--标题-->
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <div class="title-section">
-                                <h2 class="title">{{result.aboutUsTitle}}</h2>
-                                <p class="desc-title">{{result.aboutUsDesc}}</p>
+                                <h2 class="title">关于我们</h2>
                             </div>
                         </div><!-- /.col-md-6 -->
                     </div><!-- /.row -->
@@ -262,7 +262,6 @@
                             <div class="flat-about-us">
                                 <span class="dropcap">{{result.aboutUsFirstWord}}</span>
                                 {{result.aboutUsContent}}
-                                <a class="button white">Read More</a>
                             </div><!-- /.flat-about-us -->
                         </div><!-- /.col-md-4 -->
 
